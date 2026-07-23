@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A股市场情绪日报｜2026-07-23</title>
+<style>:root {
+  --ink: #15283c;
+  --paper: #f4f1e9;
+  --card: #fffdf8;
+  --blue: #153f66;
+  --cyan: #5ab7b2;
+  --red: #d95d4f;
+  --amber: #dca23a;
+  --muted: #728091;
+  --line: rgba(21, 40, 60, .14);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 10% 8%, rgba(90,183,178,.13), transparent 24rem),
+    var(--paper);
+  font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+}
+main { overflow: hidden; }
+.hero {
+  min-height: 680px;
+  color: #fff;
+  padding: 0 max(5vw, 28px) 70px;
+  background:
+    linear-gradient(115deg, rgba(10,31,50,.98), rgba(21,63,102,.94)),
+    repeating-linear-gradient(90deg, transparent 0 89px, rgba(255,255,255,.04) 90px);
+  position: relative;
+}
+.hero::after {
+  content: ""; position: absolute; width: 440px; height: 440px; border: 1px solid rgba(255,255,255,.13);
+  border-radius: 50%; right: -170px; top: 120px; box-shadow: 0 0 0 80px rgba(255,255,255,.025), 0 0 0 160px rgba(255,255,255,.018);
+}
+.nav { height: 98px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,.16); }
+.brand { display: flex; gap: 12px; align-items: center; font-weight: 800; letter-spacing: .06em; }
+.brand-mark { display: grid; place-items: center; width: 34px; height: 34px; color: #0a263f; background: var(--cyan); border-radius: 50%; font-family: serif; }
+.nav-meta { color: #b8c7d5; font-size: 13px; display: flex; align-items: center; gap: 9px; }
+.live-dot { width: 7px; height: 7px; border-radius: 50%; background: #71d2a0; box-shadow: 0 0 0 5px rgba(113,210,160,.12); }
+.hero-grid { max-width: 1280px; margin: 92px auto 0; display: grid; grid-template-columns: 1.35fr .65fr; gap: 80px; align-items: center; position: relative; z-index: 1; }
+.eyebrow, .section-index { color: var(--cyan); font-size: 12px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+h1 { font-size: clamp(44px, 6vw, 76px); line-height: 1.08; margin: 18px 0 26px; letter-spacing: -.045em; }
+.hero-copy { max-width: 680px; color: #bdc9d5; line-height: 1.9; font-size: 16px; }
+.temperature-card { padding: 30px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); backdrop-filter: blur(12px); border-radius: 4px; }
+.temperature-head { display:flex; justify-content:space-between; color:#c8d4df; font-size:13px; }
+.temperature-head b { color:#ffce79; }
+.temperature-score { display:flex; align-items:baseline; gap:8px; margin:30px 0 18px; }
+.temperature-score strong { font-family: Georgia, serif; font-size:84px; line-height:.8; font-weight:400; }
+.temperature-score span { color:#a8b8c6; }
+.temperature-track, .meter, .breadth-bar { height:5px; background:rgba(255,255,255,.12); overflow:hidden; }
+.temperature-track i { display:block; height:100%; background:linear-gradient(90deg, #5ab7b2, #e0ad4b, #d95d4f); }
+.temperature-labels { display:flex; justify-content:space-between; margin-top:9px; color:#91a4b5; font-size:10px; }
+.temperature-card p { line-height:1.7; color:#d6e0e8; margin:26px 0 0; }
+.section { max-width:1280px; margin:0 auto; padding:88px 28px; }
+.section-heading { display:flex; align-items:flex-end; justify-content:space-between; gap:30px; margin-bottom:36px; }
+.section-heading h2 { font-family: Georgia, "Microsoft YaHei", serif; font-size:34px; margin:8px 0 0; letter-spacing:-.03em; }
+.source-pill { padding:9px 14px; border:1px solid var(--line); border-radius:30px; color:var(--muted); font-size:11px; }
+.section-note { color:var(--muted); font-size:12px; }
+.verdict-grid { display:grid; grid-template-columns:repeat(3, 1fr); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.verdict { display:grid; grid-template-columns:46px 1fr; gap:20px; padding:30px 28px; border-right:1px solid var(--line); }
+.verdict:last-child { border-right:0; }
+.verdict > span { color:var(--cyan); font-family:Georgia,serif; font-size:22px; }
+.verdict h3 { margin:0 0 10px; font-size:16px; }
+.verdict p { margin:0; color:var(--muted); line-height:1.7; font-size:13px; }
+.metrics-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; }
+.metric-card { background:var(--card); padding:24px; border:1px solid rgba(21,40,60,.09); box-shadow:0 12px 32px rgba(23,42,59,.055); }
+.metric-top { display:flex; justify-content:space-between; align-items:center; color:var(--muted); font-size:12px; }
+.state-dot { font-size:10px; padding:4px 8px; border-radius:20px; }
+.state-dot.hot { color:#a23b32; background:#f9ddd8; }
+.state-dot.cold { color:#266267; background:#d9efed; }
+.state-dot.neutral { color:#806020; background:#f5e8c9; }
+.metric-value { font-family:Georgia,serif; font-size:42px; margin:21px 0 7px; color:var(--blue); }
+.metric-value small { font-family:inherit; color:#8b98a4; font-size:16px; margin-left:5px; }
+.metric-change { color:var(--ink); font-weight:700; font-size:12px; min-height:18px; }
+.meter { background:#e7e6df; margin:20px 0 16px; }
+.meter i { display:block; height:100%; background:var(--cyan); }
+.metric-card p { color:var(--muted); font-size:12px; line-height:1.65; margin:0; }
+.dark-section { background:#102a42; color:#fff; padding:88px max(5vw, 28px); }
+.dark-section > * { max-width:1224px; margin-left:auto; margin-right:auto; }
+.inverted .section-index { color:#7dc8c4; }
+.inverted h2 { color:#fff; }
+.health-badge { padding:10px 16px; border:1px solid rgba(255,255,255,.2); color:#ffcd77; font-size:12px; }
+.breadth-grid { display:grid; grid-template-columns:1.2fr .8fr .8fr; gap:18px; }
+.breadth-main, .structure-card { border:1px solid rgba(255,255,255,.14); padding:28px; background:rgba(255,255,255,.035); }
+.breadth-number { display:grid; grid-template-columns:auto auto 22px auto auto; gap:8px; align-items:end; }
+.breadth-number strong { font-family:Georgia,serif; font-size:48px; font-weight:400; }
+.breadth-number span { color:#9db0c0; font-size:11px; margin-bottom:8px; }
+.breadth-number em { color:#5f7890; font-size:30px; font-style:normal; text-align:center; margin-bottom:5px; }
+.breadth-bar { margin:28px 0 22px; height:7px; background:#263f56; }
+.breadth-bar i { display:block; height:100%; background:linear-gradient(90deg, #5ab7b2, #8dd7b6); }
+.breadth-main p, .structure-card p { color:#aebdca; line-height:1.7; font-size:12px; }
+.structure-card { display:grid; grid-template-columns:1fr auto; gap:12px 20px; align-items:center; }
+.structure-card span { color:#91a7b9; font-size:11px; }
+.structure-card strong { color:#fff; }
+.structure-card i { grid-column:1 / -1; height:3px; background:#d79d3d; }
+.structure-card.focus { display:block; }
+.structure-card.focus strong { display:block; font-size:18px; margin:6px 0; }
+.structure-card.focus p { margin:0 0 20px; }
+.trend-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.trend-card { background:var(--card); padding:25px; border:1px solid rgba(21,40,60,.09); }
+.trend-card > div:first-child { display:flex; justify-content:space-between; align-items:baseline; }
+.trend-card span { color:var(--muted); font-size:12px; }
+.trend-card strong { font-family:Georgia,serif; font-size:24px; color:var(--blue); }
+.trend-card p { color:var(--muted); font-size:12px; min-height:38px; line-height:1.6; }
+.bar-field { height:128px; display:flex; align-items:flex-end; gap:6px; border-bottom:1px solid var(--line); padding-top:18px; }
+.bar-field i { flex:1; min-width:6px; background:var(--blue); opacity:.82; transition:.2s; }
+.bar-field i:hover { opacity:1; }
+.mini-chart.amber .bar-field i { background:var(--amber); }
+.mini-chart.red .bar-field i { background:var(--red); }
+.axis { display:flex; justify-content:space-between; margin-top:7px; color:#9aa4ad; font-size:9px; }
+.debrief { padding-top:50px; }
+.debrief-grid { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--line); }
+.debrief-grid article { padding:26px 24px; border-right:1px solid var(--line); }
+.debrief-grid article:last-child { border-right:0; }
+.debrief-grid span { color:var(--cyan); font-family:Georgia,serif; }
+.debrief-grid h3 { font-size:14px; margin:15px 0 10px; }
+.debrief-grid p { color:var(--muted); font-size:12px; line-height:1.75; }
+footer { background:#0b1f31; color:#fff; padding:44px max(5vw,28px); display:flex; justify-content:space-between; align-items:center; }
+footer p, .footer-meta { color:#8fa2b3; font-size:10px; }
+.footer-meta { display:flex; gap:24px; }
+
+@media (max-width: 900px) {
+  .hero { min-height:auto; }
+  .hero-grid { grid-template-columns:1fr; margin-top:55px; gap:40px; }
+  .metrics-grid, .trend-grid { grid-template-columns:1fr 1fr; }
+  .breadth-grid { grid-template-columns:1fr; }
+  .verdict-grid, .debrief-grid { grid-template-columns:1fr 1fr; }
+  .verdict:nth-child(2) { border-right:0; }
+}
+@media (max-width: 600px) {
+  .nav { height:78px; }
+  .nav-meta { font-size:10px; }
+  h1 { font-size:42px; }
+  .hero-grid { margin-top:42px; }
+  .temperature-score strong { font-size:68px; }
+  .section { padding:64px 20px; }
+  .section-heading { align-items:flex-start; flex-direction:column; }
+  .section-heading h2 { font-size:28px; }
+  .metrics-grid, .trend-grid, .verdict-grid, .debrief-grid { grid-template-columns:1fr; }
+  .verdict, .debrief-grid article { border-right:0; border-bottom:1px solid var(--line); }
+  .breadth-number strong { font-size:36px; }
+  footer { align-items:flex-start; flex-direction:column; gap:24px; }
+  .footer-meta { flex-direction:column; gap:8px; }
+}
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <nav class="nav">
+      <div class="brand"><span class="brand-mark">潮</span><span>市场情绪日报</span></div>
+      <div class="nav-meta"><span class="live-dot"></span>盘后版 · 2026-07-23</div>
+    </nav>
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">A-SHARE SENTIMENT / WIND DATA</p>
+        <h1>看清市场的温度，<br>不被指数的表象带走。</h1>
+        <p class="hero-copy">从热度、拥挤度、脆弱度与市场广度四个维度，把收盘后的复杂信号压缩成一套可复核的行动框架。</p>
+      </div>
+      <section class="temperature-card">
+        <div class="temperature-head"><span>综合情绪温度</span><b>中性偏暖</b></div>
+        <div class="temperature-score"><strong>58</strong><span>/ 100</span></div>
+        <div class="temperature-track"><i style="width:58%"></i></div>
+        <div class="temperature-labels"><span>恐慌</span><span>谨慎</span><span>均衡</span><span>亢奋</span></div>
+        <p>赚钱效应明显修复，但成交缩量与杠杆资金回落限制了情绪上行斜率。</p>
+      </section>
+    </div>
+  </header>
+
+  <section class="section quick-read">
+    <div class="section-heading">
+      <div><p class="section-index">01 / 30 秒结论</p><h2>今天的市场，强在哪里、弱在哪里</h2></div>
+      <span class="source-pill">Wind · 2026-07-23 16:32</span>
+    </div>
+    <div class="verdict-grid">
+      <article class="verdict"><span>01</span><div><h3>广度改善</h3><p>上涨家数占比 77.8%，赚钱效应扩散，不是少数权重拉动。</p></div></article>
+      <article class="verdict"><span>02</span><div><h3>量能退潮</h3><p>两市成交额环比回落 17.21%，修复行情仍需增量资金确认。</p></div></article>
+      <article class="verdict"><span>03</span><div><h3>中期性价比仍在</h3><p>ERP 位于布局区，但短期风险偏好尚未形成趋势强化。</p></div></article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <div><p class="section-index">02 / 核心指标</p><h2>市场温度的六个锚点</h2></div>
+      <p class="section-note">同一数据快照生成，杜绝卡片与结论口径漂移</p>
+    </div>
+    <div class="metrics-grid">
+      <article class="metric-card">
+  <div class="metric-top"><span>两市总成交额</span><span class="state-dot cold">降温</span></div>
+  <div class="metric-value">22095<small>亿</small></div>
+  <div class="metric-change">环比 -17.21%</div>
+  <div class="meter" aria-label="两市总成交额强度 42%"><i style="width:42%"></i></div>
+  <p>低于近 30 日均值，反弹的量能确认不足。</p>
+</article>
+      <article class="metric-card">
+  <div class="metric-top"><span>上涨 / 下跌</span><span class="state-dot hot">升温</span></div>
+  <div class="metric-value">4057 : 1157</div>
+  <div class="metric-change">上涨占比 77.8%</div>
+  <div class="meter" aria-label="上涨 / 下跌强度 78%"><i style="width:78%"></i></div>
+  <p>个股参与度广，短线赚钱效应显著修复。</p>
+</article>
+      <article class="metric-card">
+  <div class="metric-top"><span>融资融券余额</span><span class="state-dot cold">降温</span></div>
+  <div class="metric-value">29699<small>亿</small></div>
+  <div class="metric-change">单日 -135 亿</div>
+  <div class="meter" aria-label="融资融券余额强度 38%"><i style="width:38%"></i></div>
+  <p>杠杆资金仍在去化，追涨意愿偏谨慎。</p>
+</article>
+      <article class="metric-card">
+  <div class="metric-top"><span>万得全 A PE-TTM</span><span class="state-dot neutral">中性</span></div>
+  <div class="metric-value">22.36<small>倍</small></div>
+  <div class="metric-change">30 日均 22.36</div>
+  <div class="meter" aria-label="万得全 A PE-TTM强度 54%"><i style="width:54%"></i></div>
+  <p>估值回到中性区间，尚未出现明显拥挤。</p>
+</article>
+      <article class="metric-card">
+  <div class="metric-top"><span>股债性价比 ERP</span><span class="state-dot hot">升温</span></div>
+  <div class="metric-value">2.75<small>%</small></div>
+  <div class="metric-change">1/PE 4.47% − 10Y 1.73%</div>
+  <div class="meter" aria-label="股债性价比 ERP强度 67%"><i style="width:67%"></i></div>
+  <p>权益相对债券吸引力处于可布局区间。</p>
+</article>
+      <article class="metric-card">
+  <div class="metric-top"><span>50ETF 隐含波动率</span><span class="state-dot neutral">中性</span></div>
+  <div class="metric-value">15.97</div>
+  <div class="metric-change">近 5 日持平</div>
+  <div class="meter" aria-label="50ETF 隐含波动率强度 46%"><i style="width:46%"></i></div>
+  <p>避险需求不高，未见明显恐慌定价。</p>
+</article>
+    </div>
+  </section>
+
+  <section class="dark-section">
+    <div class="section-heading inverted">
+      <div><p class="section-index">03 / 结构体检</p><h2>指数背后，赚钱效应是否真实</h2></div>
+      <div class="health-badge 健康">健康扩散</div>
+    </div>
+    <div class="breadth-grid">
+      <article class="breadth-main">
+        <div class="breadth-number">
+          <strong>4057</strong><span>上涨</span><em>:</em><strong>1157</strong><span>下跌</span>
+        </div>
+        <div class="breadth-bar"><i style="width:77.8%"></i></div>
+        <p>指数上涨得到多数个股响应，市场广度健康；但成交缩量意味着扩散的持续性仍需次日验证。</p>
+      </article>
+      <article class="structure-card">
+        <span>热度</span><strong>66</strong><i style="width:66%"></i>
+        <span>拥挤度</span><strong>49</strong><i style="width:49%"></i>
+        <span>脆弱度</span><strong>55</strong><i style="width:55%"></i>
+      </article>
+      <article class="structure-card focus">
+        <span>最强方向</span><strong>电力与能源</strong>
+        <p>涨停名单集中度提升，资金承接较强。</p>
+        <span>最弱方向</span><strong>高位次新</strong>
+        <p>部分高弹性标的分化，追高性价比下降。</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <div><p class="section-index">04 / 近十日趋势</p><h2>边际变化比单日点位更重要</h2></div>
+    </div>
+    <div class="trend-grid">
+      <article class="trend-card">
+        <div><span>两市成交额</span><strong>2.21 万亿</strong></div>
+        <p>从高位回落，增量资金边际放缓。</p>
+        <div class="mini-chart blue">
+  <div class="bar-field" aria-label="近十日趋势"><i style="height:24.0%" title="07/10：19800"></i><i style="height:32.4%" title="07/11：21100"></i><i style="height:42.0%" title="07/14：22600"></i><i style="height:52.3%" title="07/15：24200"></i><i style="height:69.1%" title="07/16：26800"></i><i style="height:78.7%" title="07/17：28300"></i><i style="height:90.3%" title="07/18：30100"></i><i style="height:100.0%" title="07/21：31600"></i><i style="height:68.4%" title="07/22：26690"></i><i style="height:38.8%" title="07/23：22095"></i></div>
+  <div class="axis"><span>07/10</span><span>07/23</span></div>
+</div>
+      </article>
+      <article class="trend-card">
+        <div><span>融资余额</span><strong>2.97 万亿</strong></div>
+        <p>持续去杠杆，市场脆弱度有所下降。</p>
+        <div class="mini-chart amber">
+  <div class="bar-field" aria-label="近十日趋势"><i style="height:100.0%" title="07/10：30480"></i><i style="height:91.2%" title="07/11：30390"></i><i style="height:80.5%" title="07/14：30280"></i><i style="height:71.8%" title="07/15：30190"></i><i style="height:61.6%" title="07/16：30085"></i><i style="height:51.3%" title="07/17：29980"></i><i style="height:45.5%" title="07/18：29920"></i><i style="height:39.7%" title="07/21：29860"></i><i style="height:37.1%" title="07/22：29834"></i><i style="height:24.0%" title="07/23：29699"></i></div>
+  <div class="axis"><span>07/10</span><span>07/23</span></div>
+</div>
+      </article>
+      <article class="trend-card">
+        <div><span>上涨占比</span><strong>77.8%</strong></div>
+        <p>单日广度显著改善，关注能否连续两日维持。</p>
+        <div class="mini-chart red">
+  <div class="bar-field" aria-label="近十日趋势"><i style="height:65.9%" title="07/10：46"></i><i style="height:72.3%" title="07/11：52"></i><i style="height:57.3%" title="07/14：38"></i><i style="height:82.0%" title="07/15：61"></i><i style="height:77.7%" title="07/16：57"></i><i style="height:61.6%" title="07/17：42"></i><i style="height:49.8%" title="07/18：31"></i><i style="height:46.5%" title="07/21：28"></i><i style="height:24.0%" title="07/22：7"></i><i style="height:100.0%" title="07/23：77.8"></i></div>
+  <div class="axis"><span>07/10</span><span>07/23</span></div>
+</div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section debrief">
+    <div class="section-heading">
+      <div><p class="section-index">05 / 盘后复盘</p><h2>把今日变化落到明日观察</h2></div>
+    </div>
+    <div class="debrief-grid">
+      <article><span>01</span><h3>今日市场全景</h3><p>指数温和上涨，个股普遍修复，但成交额明显缩量，属于广度强、量能弱的组合。</p></article>
+      <article><span>02</span><h3>主线与轮动</h3><p>电力、能源方向承接更强，部分次新与高弹性品种分化，轮动速度仍快。</p></article>
+      <article><span>03</span><h3>最重要的变化</h3><p>广度从前一日极弱快速修复，但杠杆资金没有同步回流，说明风险偏好仍偏试探。</p></article>
+      <article><span>04</span><h3>明日重点观察</h3><p>关注成交额能否回到 30 日均值附近、上涨家数能否连续占优，以及核心方向是否出现放量承接。</p></article>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <div class="brand"><span class="brand-mark">潮</span><span>市场情绪日报</span></div>
+      <p>数据来源于万得 Wind 金融数据服务。仅供研究，不构成投资建议。</p>
+    </div>
+    <div class="footer-meta"><span>交易日 16:30 更新</span><span>钉钉机器人 · Server酱</span></div>
+  </footer>
+</main>
+</body>
+</html>
