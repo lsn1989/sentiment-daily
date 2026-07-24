@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A股市场情绪日报｜2026-07-23</title>
+<title>A股市场情绪日报｜2026-07-24</title>
 <style>:root {
   --ink: #15283c;
   --paper: #f4f1e9;
@@ -150,6 +150,20 @@ footer p, .footer-meta { color:#8fa2b3; font-size:10px; }
   footer { align-items:flex-start; flex-direction:column; gap:24px; }
   .footer-meta { flex-direction:column; gap:8px; }
 }
+
+/* 涨停/跌停统计 */
+.limit-stats { display:flex; gap:24px; margin-top:22px; padding-top:18px; border-top:1px solid rgba(255,255,255,.1); }
+.limit-item { display:flex; align-items:baseline; gap:8px; }
+.limit-item strong { font-family:Georgia,serif; font-size:28px; font-weight:400; }
+.limit-item span { color:#9db0c0; font-size:11px; }
+.limit-item.up strong { color:#ff8a7a; }
+.limit-item.down strong { color:#6ecfc9; }
+
+/* 预警横幅 */
+.alert-banner { max-width:1280px; margin:-20px auto 0; padding:0 28px; position:relative; z-index:2; }
+.alert-banner:empty { display:none; }
+.alert-item { display:flex; align-items:center; gap:12px; padding:14px 20px; margin-bottom:8px; background:#fff3f0; border:1px solid #f5c6bc; border-left:4px solid var(--red); color:#8b3a2f; font-size:13px; line-height:1.5; }
+.alert-item .alert-icon { flex-shrink:0; width:20px; height:20px; display:grid; place-items:center; background:var(--red); color:#fff; border-radius:50%; font-size:11px; font-weight:700; }
 </style>
 </head>
 <body>
@@ -157,7 +171,7 @@ footer p, .footer-meta { color:#8fa2b3; font-size:10px; }
   <header class="hero">
     <nav class="nav">
       <div class="brand"><span class="brand-mark">潮</span><span>市场情绪日报</span></div>
-      <div class="nav-meta"><span class="live-dot"></span>盘后版 · 2026-07-23</div>
+      <div class="nav-meta"><span class="live-dot"></span>盘后版 · 2026-07-24</div>
     </nav>
     <div class="hero-grid">
       <div>
@@ -166,24 +180,28 @@ footer p, .footer-meta { color:#8fa2b3; font-size:10px; }
         <p class="hero-copy">从热度、拥挤度、脆弱度与市场广度四个维度，把收盘后的复杂信号压缩成一套可复核的行动框架。</p>
       </div>
       <section class="temperature-card">
-        <div class="temperature-head"><span>综合情绪温度</span><b>中性偏暖</b></div>
-        <div class="temperature-score"><strong>58</strong><span>/ 100</span></div>
-        <div class="temperature-track"><i style="width:58%"></i></div>
+        <div class="temperature-head"><span>综合情绪温度</span><b>谨慎</b></div>
+        <div class="temperature-score"><strong>22</strong><span>/ 100</span></div>
+        <div class="temperature-track"><i style="width:22%"></i></div>
         <div class="temperature-labels"><span>恐慌</span><span>谨慎</span><span>均衡</span><span>亢奋</span></div>
-        <p>赚钱效应明显修复，但成交缩量与杠杆资金回落限制了情绪上行斜率。</p>
+        <p>两市缩量普跌，上涨占比仅10.1%，情绪逼近冰点，谨慎为主。</p>
       </section>
     </div>
   </header>
 
+  <div class="alert-banner">
+    <div class="alert-item"><span class="alert-icon">!</span><span>情绪冰点：恐慌情绪浓厚，关注超跌反弹机会</span></div>
+  </div>
+
   <section class="section quick-read">
     <div class="section-heading">
       <div><p class="section-index">01 / 30 秒结论</p><h2>今天的市场，强在哪里、弱在哪里</h2></div>
-      <span class="source-pill">Wind · 2026-07-23 16:32</span>
+      <span class="source-pill">Wind · 2026-07-24 16:30</span>
     </div>
     <div class="verdict-grid">
-      <article class="verdict"><span>01</span><div><h3>广度改善</h3><p>上涨家数占比 77.8%，赚钱效应扩散，不是少数权重拉动。</p></div></article>
-      <article class="verdict"><span>02</span><div><h3>量能退潮</h3><p>两市成交额环比回落 17.21%，修复行情仍需增量资金确认。</p></div></article>
-      <article class="verdict"><span>03</span><div><h3>中期性价比仍在</h3><p>ERP 位于布局区，但短期风险偏好尚未形成趋势强化。</p></div></article>
+      <article class="verdict"><span>01</span><div><h3>市场广度极度虚弱，普跌格局显著</h3><p>今日上涨仅555家，下跌4940家，上涨占比10.1%，远低于健康线65%。指数跌幅较大且个股普跌，市场处于恐慌性抛售状态，赚钱效应极差。</p></div></article>
+      <article class="verdict"><span>02</span><div><h3>成交额大幅萎缩，资金观望情绪浓厚</h3><p>两市合计成交9154亿元，较前日21953亿缩量12%，创近10个交易日新低。成交相对10日均值偏离-32.7%，显示市场参与意愿急剧下降。</p></div></article>
+      <article class="verdict"><span>03</span><div><h3>银行板块逆势抗跌，避险特征明显</h3><p>银行(申万)+0.31%为今日极少数逆势板块，有色金属(申万)-4.71%领跌。资金在恐慌中流向低估值防御板块，周期与成长板块遭集中抛售。</p></div></article>
     </div>
   </section>
 
@@ -195,45 +213,45 @@ footer p, .footer-meta { color:#8fa2b3; font-size:10px; }
     <div class="metrics-grid">
       <article class="metric-card">
   <div class="metric-top"><span>两市总成交额</span><span class="state-dot cold">降温</span></div>
-  <div class="metric-value">22095<small>亿</small></div>
-  <div class="metric-change">环比 -17.21%</div>
-  <div class="meter" aria-label="两市总成交额强度 42%"><i style="width:42%"></i></div>
-  <p>低于近 30 日均值，反弹的量能确认不足。</p>
+  <div class="metric-value">9154<small>亿</small></div>
+  <div class="metric-change">环比 -12.0%</div>
+  <div class="meter" aria-label="两市总成交额强度 19%"><i style="width:19%"></i></div>
+  <p>两市合计成交额较前日大幅缩量，创近10日新低</p>
 </article>
       <article class="metric-card">
-  <div class="metric-top"><span>上涨 / 下跌</span><span class="state-dot hot">升温</span></div>
-  <div class="metric-value">4057 : 1157</div>
-  <div class="metric-change">上涨占比 77.8%</div>
-  <div class="meter" aria-label="上涨 / 下跌强度 78%"><i style="width:78%"></i></div>
-  <p>个股参与度广，短线赚钱效应显著修复。</p>
+  <div class="metric-top"><span>上涨 / 下跌</span><span class="state-dot cold">降温</span></div>
+  <div class="metric-value">555 : 4940</div>
+  <div class="metric-change">上涨占比 10.1%</div>
+  <div class="meter" aria-label="上涨 / 下跌强度 10%"><i style="width:10%"></i></div>
+  <p>个股普跌，赚钱效应极差，恐慌性抛售格局</p>
 </article>
       <article class="metric-card">
-  <div class="metric-top"><span>融资融券余额</span><span class="state-dot cold">降温</span></div>
-  <div class="metric-value">29699<small>亿</small></div>
-  <div class="metric-change">单日 -135 亿</div>
-  <div class="meter" aria-label="融资融券余额强度 38%"><i style="width:38%"></i></div>
-  <p>杠杆资金仍在去化，追涨意愿偏谨慎。</p>
+  <div class="metric-top"><span>融资融券余额</span><span class="state-dot neutral">中性</span></div>
+  <div class="metric-value">--<small>亿</small></div>
+  <div class="metric-change">--</div>
+  <div class="meter" aria-label="融资融券余额强度 40%"><i style="width:40%"></i></div>
+  <p>数据暂缺，Wind接口未返回融资融券余额数据</p>
 </article>
       <article class="metric-card">
-  <div class="metric-top"><span>万得全 A PE-TTM</span><span class="state-dot neutral">中性</span></div>
-  <div class="metric-value">22.36<small>倍</small></div>
-  <div class="metric-change">30 日均 22.36</div>
-  <div class="meter" aria-label="万得全 A PE-TTM强度 54%"><i style="width:54%"></i></div>
-  <p>估值回到中性区间，尚未出现明显拥挤。</p>
+  <div class="metric-top"><span>万得全A PE-TTM</span><span class="state-dot neutral">中性</span></div>
+  <div class="metric-value">21.93<small>倍</small></div>
+  <div class="metric-change">前日 22.36</div>
+  <div class="meter" aria-label="万得全A PE-TTM强度 50%"><i style="width:50%"></i></div>
+  <p>估值处于中性水平，较前日有所回落</p>
 </article>
       <article class="metric-card">
   <div class="metric-top"><span>股债性价比 ERP</span><span class="state-dot hot">升温</span></div>
-  <div class="metric-value">2.75<small>%</small></div>
-  <div class="metric-change">1/PE 4.47% − 10Y 1.73%</div>
-  <div class="meter" aria-label="股债性价比 ERP强度 67%"><i style="width:67%"></i></div>
-  <p>权益相对债券吸引力处于可布局区间。</p>
+  <div class="metric-value">2.84<small>%</small></div>
+  <div class="metric-change">1/PE 4.56% − 10Y 1.724%</div>
+  <div class="meter" aria-label="股债性价比 ERP强度 65%"><i style="width:65%"></i></div>
+  <p>接近3%高位，权益相对债券有配置吸引力</p>
 </article>
       <article class="metric-card">
   <div class="metric-top"><span>50ETF 隐含波动率</span><span class="state-dot neutral">中性</span></div>
-  <div class="metric-value">15.97</div>
-  <div class="metric-change">近 5 日持平</div>
-  <div class="meter" aria-label="50ETF 隐含波动率强度 46%"><i style="width:46%"></i></div>
-  <p>避险需求不高，未见明显恐慌定价。</p>
+  <div class="metric-value">18.01<small>%</small></div>
+  <div class="metric-change">前日 15.97</div>
+  <div class="meter" aria-label="50ETF 隐含波动率强度 50%"><i style="width:50%"></i></div>
+  <p>较前日上升，但仍处中性区间，暂无恐慌定价</p>
 </article>
     </div>
   </section>
@@ -241,26 +259,30 @@ footer p, .footer-meta { color:#8fa2b3; font-size:10px; }
   <section class="dark-section">
     <div class="section-heading inverted">
       <div><p class="section-index">03 / 结构体检</p><h2>指数背后，赚钱效应是否真实</h2></div>
-      <div class="health-badge 健康">健康扩散</div>
+      <div class="health-badge 虚弱">普跌</div>
     </div>
     <div class="breadth-grid">
       <article class="breadth-main">
         <div class="breadth-number">
-          <strong>4057</strong><span>上涨</span><em>:</em><strong>1157</strong><span>下跌</span>
+          <strong>555</strong><span>上涨</span><em>:</em><strong>4940</strong><span>下跌</span>
         </div>
-        <div class="breadth-bar"><i style="width:77.8%"></i></div>
-        <p>指数上涨得到多数个股响应，市场广度健康；但成交缩量意味着扩散的持续性仍需次日验证。</p>
+        <div class="breadth-bar"><i style="width:10.1%"></i></div>
+        <div class="limit-stats">
+          <div class="limit-item up"><strong>43</strong><span>涨停</span></div>
+          <div class="limit-item down"><strong>25</strong><span>跌停</span></div>
+        </div>
+        <p>上涨占比10.1%，远低于健康线65%。指数下跌且个股普跌，市场广度极度虚弱，属于典型恐慌性普跌格局。</p>
       </article>
       <article class="structure-card">
-        <span>热度</span><strong>66</strong><i style="width:66%"></i>
-        <span>拥挤度</span><strong>49</strong><i style="width:49%"></i>
-        <span>脆弱度</span><strong>55</strong><i style="width:55%"></i>
+        <span>热度</span><strong>15</strong><i style="width:15%"></i>
+        <span>拥挤度</span><strong>40</strong><i style="width:40%"></i>
+        <span>脆弱度</span><strong>38</strong><i style="width:38%"></i>
       </article>
       <article class="structure-card focus">
-        <span>最强方向</span><strong>电力与能源</strong>
-        <p>涨停名单集中度提升，资金承接较强。</p>
-        <span>最弱方向</span><strong>高位次新</strong>
-        <p>部分高弹性标的分化，追高性价比下降。</p>
+        <span>最强方向</span><strong>银行(申万)</strong>
+        <p>+0.31%，低估值防御板块逆势抗跌，避险资金集中流入</p>
+        <span>最弱方向</span><strong>有色金属(申万)</strong>
+        <p>-4.71%，前期强势周期板块大幅回调，领跌全场</p>
       </article>
     </div>
   </section>
@@ -271,27 +293,27 @@ footer p, .footer-meta { color:#8fa2b3; font-size:10px; }
     </div>
     <div class="trend-grid">
       <article class="trend-card">
-        <div><span>两市成交额</span><strong>2.21 万亿</strong></div>
-        <p>从高位回落，增量资金边际放缓。</p>
+        <div><span>两市成交额</span><strong>9154亿</strong></div>
+        <p>成交额从28178亿持续萎缩至9154亿，近10日缩量趋势明显，市场参与意愿急剧下降。</p>
         <div class="mini-chart blue">
-  <div class="bar-field" aria-label="近十日趋势"><i style="height:24.0%" title="07/10：19800"></i><i style="height:32.4%" title="07/11：21100"></i><i style="height:42.0%" title="07/14：22600"></i><i style="height:52.3%" title="07/15：24200"></i><i style="height:69.1%" title="07/16：26800"></i><i style="height:78.7%" title="07/17：28300"></i><i style="height:90.3%" title="07/18：30100"></i><i style="height:100.0%" title="07/21：31600"></i><i style="height:68.4%" title="07/22：26690"></i><i style="height:38.8%" title="07/23：22095"></i></div>
-  <div class="axis"><span>07/10</span><span>07/23</span></div>
+  <div class="bar-field" aria-label="近十日趋势"><i style="height:89.7%" title="07/11：28178"></i><i style="height:81.3%" title="07/14：27040"></i><i style="height:71.4%" title="07/15：25712"></i><i style="height:59.0%" title="07/16：24036"></i><i style="height:77.6%" title="07/17：26550"></i><i style="height:81.1%" title="07/20：27021"></i><i style="height:100.0%" title="07/21：29571"></i><i style="height:77.5%" title="07/22：26533"></i><i style="height:43.6%" title="07/23：21953"></i><i style="height:24.0%" title="07/24：19311"></i></div>
+  <div class="axis"><span>07/11</span><span>07/24</span></div>
 </div>
       </article>
       <article class="trend-card">
-        <div><span>融资余额</span><strong>2.97 万亿</strong></div>
-        <p>持续去杠杆，市场脆弱度有所下降。</p>
+        <div><span>融资余额</span><strong>--</strong></div>
+        <p>融资余额数据暂缺，Wind接口未返回相关指标。</p>
         <div class="mini-chart amber">
-  <div class="bar-field" aria-label="近十日趋势"><i style="height:100.0%" title="07/10：30480"></i><i style="height:91.2%" title="07/11：30390"></i><i style="height:80.5%" title="07/14：30280"></i><i style="height:71.8%" title="07/15：30190"></i><i style="height:61.6%" title="07/16：30085"></i><i style="height:51.3%" title="07/17：29980"></i><i style="height:45.5%" title="07/18：29920"></i><i style="height:39.7%" title="07/21：29860"></i><i style="height:37.1%" title="07/22：29834"></i><i style="height:24.0%" title="07/23：29699"></i></div>
-  <div class="axis"><span>07/10</span><span>07/23</span></div>
+  <div class="bar-field" aria-label="近十日趋势"></div>
+  <div class="axis"><span>07/11</span><span>07/24</span></div>
 </div>
       </article>
       <article class="trend-card">
-        <div><span>上涨占比</span><strong>77.8%</strong></div>
-        <p>单日广度显著改善，关注能否连续两日维持。</p>
+        <div><span>上涨占比</span><strong>10.1%</strong></div>
+        <p>上涨占比从前日77.8%骤降至10.1%，市场广度从健康扩散急转为普跌，情绪反转剧烈。</p>
         <div class="mini-chart red">
-  <div class="bar-field" aria-label="近十日趋势"><i style="height:65.9%" title="07/10：46"></i><i style="height:72.3%" title="07/11：52"></i><i style="height:57.3%" title="07/14：38"></i><i style="height:82.0%" title="07/15：61"></i><i style="height:77.7%" title="07/16：57"></i><i style="height:61.6%" title="07/17：42"></i><i style="height:49.8%" title="07/18：31"></i><i style="height:46.5%" title="07/21：28"></i><i style="height:24.0%" title="07/22：7"></i><i style="height:100.0%" title="07/23：77.8"></i></div>
-  <div class="axis"><span>07/10</span><span>07/23</span></div>
+  <div class="bar-field" aria-label="近十日趋势"><i style="height:72.3%" title="07/11：52"></i><i style="height:57.3%" title="07/14：38"></i><i style="height:82.0%" title="07/15：61"></i><i style="height:77.7%" title="07/16：57"></i><i style="height:61.6%" title="07/17：42"></i><i style="height:49.8%" title="07/20：31"></i><i style="height:46.5%" title="07/21：28"></i><i style="height:24.0%" title="07/22：7"></i><i style="height:100.0%" title="07/23：77.8"></i><i style="height:27.3%" title="07/24：10.1"></i></div>
+  <div class="axis"><span>07/11</span><span>07/24</span></div>
 </div>
       </article>
     </div>
@@ -302,10 +324,10 @@ footer p, .footer-meta { color:#8fa2b3; font-size:10px; }
       <div><p class="section-index">05 / 盘后复盘</p><h2>把今日变化落到明日观察</h2></div>
     </div>
     <div class="debrief-grid">
-      <article><span>01</span><h3>今日市场全景</h3><p>指数温和上涨，个股普遍修复，但成交额明显缩量，属于广度强、量能弱的组合。</p></article>
-      <article><span>02</span><h3>主线与轮动</h3><p>电力、能源方向承接更强，部分次新与高弹性品种分化，轮动速度仍快。</p></article>
-      <article><span>03</span><h3>最重要的变化</h3><p>广度从前一日极弱快速修复，但杠杆资金没有同步回流，说明风险偏好仍偏试探。</p></article>
-      <article><span>04</span><h3>明日重点观察</h3><p>关注成交额能否回到 30 日均值附近、上涨家数能否连续占优，以及核心方向是否出现放量承接。</p></article>
+      <article><span>01</span><h3>全景：两市缩量普跌，情绪逼近冰点</h3><p>今日两市低开低走，全天几乎没有像样反弹。上证跌1.61%报3814点，深证跌2.47%报13775点。上涨仅555家，下跌4940家，赚钱效应极差，涨停43家、跌停25家。</p></article>
+      <article><span>02</span><h3>主线：板块普跌无主线，周期领跌防御抗跌</h3><p>今日几乎没有上涨板块。有色金属(申万)-4.71%领跌，前期强势的周期板块大幅杀跌。银行(申万)+0.31%为极少数逆势板块，低估值防御特征明显。</p></article>
+      <article><span>03</span><h3>最重要变化：成交额断崖式萎缩</h3><p>成交额从前日21953亿骤降至9154亿，单日缩量12%，创近10日新低。资金参与意愿急剧下降，多空双方趋于观望。</p></article>
+      <article><span>04</span><h3>明日观察：关注3800点支撑与量能变化</h3><p>上证跌破3850支撑，深证跌破13800，短期趋势明确走弱。明日关注3800点整数关口支撑力度，若成交继续萎缩至8000亿以下需警惕恐慌进一步蔓延。同时关注超跌后是否有技术性反弹，关键看反弹量能。</p></article>
     </div>
   </section>
 
